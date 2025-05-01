@@ -1,3 +1,43 @@
-src/secret/
-data/
-juypter/
+# === Global ===
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+.env
+*.env
+
+# === Python virtual environment (assumes venv folder in root) ===
+venv/
+ENV/
+env/
+.venv/
+
+# === Django backend ===
+backend/db.sqlite3
+backend/*.pyc
+backend/__pycache__/
+backend/staticfiles/
+backend/media/
+backend/.mypy_cache/
+backend/.pytest_cache/
+backend/*.log
+
+# If using Django secrets in .env
+backend/.env
+
+# === Vue frontend ===
+frontend/node_modules/
+frontend/dist/
+frontend/.env.*
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.cache/
+frontend/.vite/
+frontend/.output/
+
+# === OS/system files ===
+.DS_Store
+Thumbs.db
