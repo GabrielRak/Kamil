@@ -10,13 +10,6 @@
 export default {
     name: "Post",
     data() {
-        return {
-            post: {
-                title: "Sample Post Title",
-                content: "This is a sample post content.",
-                author: "Author Name"
-            }
-        };
     }
 };
 </script>

@@ -13,8 +13,8 @@
       </li>
     </ul>
     <div class="flex gap-4">
-      <router-link class="text-white" to="/signin">Sign In</router-link>
-      <router-link class="bg-blue-500 text-white" to="/create"
+      <router-link class="text-white" to="/sign_in">Sign In</router-link>
+      <router-link class="bg-blue-500 text-white" to="/sign_up"
         >Create</router-link
       >
     </div>

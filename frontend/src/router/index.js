@@ -22,11 +22,6 @@ const routes = [
         component:() => import('../pages/Careers.vue'),
     },
     {
-        path: '/portfolio',
-        name: 'Portfolio',
-        component: () => import('../pages/Portfolio.vue'),
-    },
-    {
         path: '/dashboard',
         name: 'Dashboard',
         component: () => import('../pages/Dashboard.vue'),
@@ -36,6 +31,16 @@ const routes = [
         name: 'Post',
         component: () => import('../pages/Post.vue'),
         props: true,
+    },
+    {
+        path:'/sign_up',
+        name:'Register',
+        component:() => import('../pages/Sign_up.vue'),
+    },
+    {
+        path:'/sign_in',
+        name:'Login',
+        component:() => import('../pages/Sign_in.vue'),
     }
 ];
 

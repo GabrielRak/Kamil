@@ -1,3 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django Migrations
+**/migrations/
+!**/migrations/__init__.py
+
+# SQLite DB
+*.sqlite3
+*.db
+
+# Environment
+.env
+*.env
+
+# VS Code
+.vscode/
+
+# Pytest
+.pytest_cache/
+
+# Byte-compiled files
+*.pyc
+*.pyo
+
+# Logs
+*.log
+
+# Media/uploads (optional – if you want to ignore user uploads)
+media/
+
+# Staticfiles (if collected)
+staticfiles/
+
+# Mac OS
+.DS_Store
+
+
 # === Global ===
 *.pyc
 *.pyo
