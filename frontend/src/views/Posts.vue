@@ -3,7 +3,8 @@
     <h1>Blog Posts</h1>
     <div>
       <div v-for="post in posts" :key="post.id" class="post">
-        <RouterLink to="/post/{{ post.id }}">
+        {{ post.id }}
+        <RouterLink :to="{ name: 'Post', params: { id: post.id } }">
           <h2 class="font-bold text-2xl text-gray-800">{{ post.title }}</h2>
         </RouterLink>
         <h1 class="font-bold text-3xl text-center">{{ post.title }}</h1>

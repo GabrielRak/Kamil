@@ -24,10 +24,10 @@ const routes = [
     {
         path: '/dashboard',
         name: 'Dashboard',
-        component: () => import('../pages/Dashboard.vue'),
+        component: () => import('../pages/app/Dashboard.vue'),
     },
     {
-        path:'/post/:postId(\\w+)',
+        path:'/post/:id',
         name: 'Post',
         component: () => import('../pages/Post.vue'),
         props: true,
@@ -35,12 +35,12 @@ const routes = [
     {
         path:'/sign_up',
         name:'Register',
-        component:() => import('../pages/Sign_up.vue'),
+        component:() => import('../pages/auth/Sign_up.vue'),
     },
     {
         path:'/sign_in',
         name:'Login',
-        component:() => import('../pages/Sign_in.vue'),
+        component:() => import('../pages/auth/Sign_in.vue'),
     }
 ];
 

@@ -48,10 +48,16 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+
+
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # if you're using Vite
-    "http://localhost:8080",  # if you're using Vue CLI
+    "http://localhost:5173",  
 ]
 
 ROOT_URLCONF = 'backend.urls'

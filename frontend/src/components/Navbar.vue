@@ -11,6 +11,9 @@
       <li>
         <router-link class="text-white" to="/dashboard">Carrers</router-link>
       </li>
+      <li>
+        <router-link class="text-white" to="/blog">Blog</router-link>
+      </li>
     </ul>
     <div class="flex gap-4">
       <router-link class="text-white" to="/sign_in">Sign In</router-link>

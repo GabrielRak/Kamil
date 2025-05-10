@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { useAuthStore } from "../stores/authStore";
+import { useAuthStore } from "../../stores/authStore";
 export default {
     name: "SignIn",
     data() {
@@ -30,9 +30,9 @@ export default {
             const authStore = useAuthStore();
             try {
                 await authStore.authUser(this.email, this.password);
+                this.$router.push("/dashboard");
             } catch (error) {
                 console.error("Sign-in failed:", error);
-                alert("Sign-in failed. Please check your credentials.");
             }
         },
     },

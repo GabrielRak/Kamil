@@ -9,3 +9,14 @@ export async function fetchPosts() {
     throw error; 
   }
 }
+
+
+export async function fetchPost(id) {
+  try{
+    const response = await axios.get('http://localhost:8000/blog/posts/' + id);
+    return response.data;
+  }catch (error) {
+    console.error('Error fetching data:', error);
+    throw error; 
+  }
+}

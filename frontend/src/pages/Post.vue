@@ -1,17 +1,28 @@
 <template>
     <div class="post">
+        <!-- Content removed as 'posts' is not defined -->
         <h1 class="post-title">{{ post.title }}</h1>
         <p class="post-content">{{ post.content }}</p>
         <p class="post-author">Written by: {{ post.author }}</p>
     </div>
 </template>
 
-<script>
-export default {
-    name: "Post",
-    data() {
-    }
-};
+<script setup>
+import { onMounted } from 'vue';
+import { useBlogStore } from '../stores/blogStore';
+import { storeToRefs } from 'pinia';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+const postId = route.params.id;
+const blogStore = useBlogStore();
+
+onMounted(() => {
+    blogStore.fetchPost(postId);
+});
+
+const { post } = storeToRefs(blogStore);
+
 </script>
 
 <style scoped>
